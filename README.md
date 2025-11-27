@@ -4,6 +4,19 @@ Using LLM embedding vectors as inputs to models to determine whether or not ther
 
 Files:
 
+gemini_pca_investigation.ipynb
+
+Python notebook using Gemini Embedding model embeddings for prompts constructed from the French Motor Claims Dataset, taken from https://www.kaggle.com/datasets/floser/french-motor-claims-datasets-fremtpl2freq. 
+
+This notebook fits a Poisson GLM on the embeddings generated from the Gemini Embedding model in two ways. 1. PCA to reduce dimensionality to 48 components. 2. Selecting first 48 columns. The notebook also uses the raw data to fit a GLM specified in section 5.2.4 of Statistical Foundations of Actuarial Learning and its Applications by Wüthrich and Merz.
+
+A Neural Network is also fit to the PCA data as well as the raw data.
+
+Various Plots comparing model test mean poisson deviance are produced for comparison.
+
+
+OUTDATED: 
+
 embedding_test.ipynb -- outdated
 embedding_v2.ipynb
 embedding_v2_5p.ipynb
